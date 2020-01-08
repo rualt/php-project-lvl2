@@ -1,8 +1,6 @@
 <?php
 
 $doc = <<<DOC
-gendiff -h
-
 Generate diff
 
 Usage:
