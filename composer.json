@@ -9,6 +9,9 @@
             "email": "rualnar@gmail.com"
         }
     ],
+    "scripts": {
+        "phpcs": "phpcs"
+    },
     "bin": [
         "bin/gendiff"
     ],
