@@ -1,2 +1,4 @@
 # php-project-lvl2
-Hexlet.io PHP online couse study project
+PHP study project (Hexlet.io online couse)
+
+[![Build Status](https://travis-ci.com/rualt/php-project-lvl2.svg?branch=master)](https://travis-ci.com/rualt/php-project-lvl2)
