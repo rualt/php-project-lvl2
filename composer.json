@@ -1,0 +1,13 @@
+{
+    "name": "rualt/difference-checker",
+    "description": "This is study project level 2 of 4 (Hexlet PHP online course)",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "rualt",
+            "email": "rualnar@gmail.com"
+        }
+    ],
+    "require": {}
+}
