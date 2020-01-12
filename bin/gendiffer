@@ -12,5 +12,24 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-$args = (new \Docopt\Handler)->handle($doc);
-print_r($args);
+$params = array(
+    'help'=>true,
+    'version'=>'Gendiffer 0.3',
+    //'optionsFirst'=>false,
+);
+
+/* $handler = new \Docopt\Handler(array(
+    'help'=>true,
+    'version'=>'gendiff version 0.3',
+    'format'=>genDiff($firstFile, $secondFile),
+    'optionsFirst'=>false,
+)); */
+
+//$args = $handler->handle($doc, $argv);
+
+$args = Docopt::handle($doc, $params);
+foreach ($args as $key => $value)
+    //echo $key.': '.json_encode($value).PHP_EOL;
+    echo $key . " => " . $value . "\n";
+
+//print_r($args['format']);
