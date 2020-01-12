@@ -13,7 +13,7 @@
         "phpcs": "phpcs"
     },
     "bin": [
-        "bin/gendiff"
+        "bin/gendiffer"
     ],
     "autoload": {
         "files": [
