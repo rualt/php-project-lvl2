@@ -17,7 +17,8 @@
     ],
     "autoload": {
         "files": [
-            "src/docopt.php"
+            "src/docopt.php",
+            "src/genDiffer.php"
         ]
     },
     "require": {
