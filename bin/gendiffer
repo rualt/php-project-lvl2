@@ -4,6 +4,8 @@
 
 require(__DIR__ . '/../src/docopt.php');
 
+use function \Differ\genDiffer;
+
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';
 $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
 if (file_exists($autoloadPath1)) {
@@ -12,24 +14,16 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-$params = array(
+$params = [
     'help'=>true,
     'version'=>'Gendiffer 0.3',
-    //'optionsFirst'=>false,
-);
-
-/* $handler = new \Docopt\Handler(array(
-    'help'=>true,
-    'version'=>'gendiff version 0.3',
-    'format'=>genDiff($firstFile, $secondFile),
-    'optionsFirst'=>false,
-)); */
-
-//$args = $handler->handle($doc, $argv);
+    'format' => 'json'
+];
 
 $args = Docopt::handle($doc, $params);
-foreach ($args as $key => $value)
-    //echo $key.': '.json_encode($value).PHP_EOL;
-    echo $key . " => " . $value . "\n";
 
-//print_r($args['format']);
+$firstPath = $args['<firstFile>'];
+$secondPath = $args['<secondFile>'];
+if (file_exists($firstPath) & file_exists($secondPath)) {
+    echo genDiffer($firstPath, $secondPath);
+}
