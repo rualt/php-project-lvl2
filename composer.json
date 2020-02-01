@@ -16,6 +16,9 @@
         "bin/gendiffer"
     ],
     "autoload": {
+        "psr-4": {
+            "Differ\\": "src"
+        },
         "files": [
             "src/docopt.php",
             "src/genDiffer.php"
