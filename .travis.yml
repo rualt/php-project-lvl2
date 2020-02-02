@@ -1,3 +1,7 @@
+env:
+  global:
+    - CC_TEST_REPORTER_ID=269f0375c78f8223d2758ede87e701d914ccb7fd353377eaaa713b408002b182
+
 language: php
 rvm:
  - '7.4'
