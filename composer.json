@@ -24,7 +24,8 @@
         },
         "files": [
             "src/docopt.php",
-            "src/genDiffer.php"
+            "src/genDiffer.php",
+            "src/parsers.php"
         ]
     },
     "require": {
