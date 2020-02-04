@@ -14,8 +14,8 @@ class GenDifferTest extends TestCase
     
     public function testIfDecoded()
     {
-        $this->assertIsArray(\Differ\Parsers\getDecodedData($this->fileJson1), 'in not an array');
-        $this->assertIsArray(\Differ\Parsers\getDecodedData($this->fileYaml1), 'in not an array');
+        $this->assertIsArray(\Differ\Parsers\getDecodedData($this->fileJson1), 'is not an array');
+        $this->assertIsArray(\Differ\Parsers\getDecodedData($this->fileYaml1), 'is not an array');
     }
 
     public function testGenDiffer()
