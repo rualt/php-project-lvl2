@@ -9,7 +9,7 @@ class GenDifferTest extends TestCase
     private $fileJson1 = __DIR__ . '/fixtures/data/before.json';
     private $fileJson2 = __DIR__ . '/fixtures/data/after.json';
     private $fileYaml1 = __DIR__ . '/fixtures/data/before.yaml';
-    private $fileYaml2 = __DIR__ . '/fixtures/data/before.yaml';
+    private $fileYaml2 = __DIR__ . '/fixtures/data/after.yaml';
 
     
     public function testIfDecoded()
