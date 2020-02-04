@@ -4,15 +4,10 @@ namespace Differ;
 
 use function Funct\Collection\flatten;
 
-function getDecodedData($filePath)
-{
-    return json_decode(file_get_contents($filePath), true);
-}
-
 function genDiffer($firstFilePath, $secondFilePath)
 {
-    $firstData = getDecodedData($firstFilePath);
-    $secondData = getDecodedData($secondFilePath);
+    $firstData = Parsers\getDecodedData($firstFilePath);
+    $secondData = Parsers\getDecodedData($secondFilePath);
     $mergedData = array_merge_recursive($firstData, $secondData);
     $mappedData = array_map(function ($key, $value) use ($firstData) {
         if (is_array($value)) {
