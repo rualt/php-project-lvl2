@@ -4,7 +4,7 @@
 
 require(__DIR__ . '/../src/docopt.php');
 
-use function \Differ\genDiffer;
+use function \Differ\genDiff;
 
 $autoloadPath1 = __DIR__ . '/../../../autoload.php';
 $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
@@ -25,5 +25,5 @@ $args = Docopt::handle($doc, $params);
 $firstPath = $args['<firstFile>'];
 $secondPath = $args['<secondFile>'];
 if (file_exists($firstPath) & file_exists($secondPath)) {
-    echo genDiffer($firstPath, $secondPath);
+    echo genDiff($firstPath, $secondPath);
 }

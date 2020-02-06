@@ -4,10 +4,10 @@ namespace Differ;
 
 use function Funct\Collection\flatten;
 
-function genDiffer($firstFilePath, $secondFilePath)
+function genDiff($firstFilePath, $secondFilePath)
 {
-    $firstData = Parsers\getDecodedData($firstFilePath);
-    $secondData = Parsers\getDecodedData($secondFilePath);
+    $firstData = Parsers\parse($firstFilePath);
+    $secondData = Parsers\parse($secondFilePath);
     $mergedData = array_merge_recursive($firstData, $secondData);
     $mappedData = array_map(function ($key, $value) use ($firstData) {
         if (is_array($value)) {

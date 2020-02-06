@@ -4,7 +4,7 @@ namespace Differ\Parsers;
 
 use Symfony\Component\Yaml\Yaml;
 
-function getDecodedData($filePath)
+function parse($filePath)
 {
     $format = pathinfo($filePath)['extension'];
 

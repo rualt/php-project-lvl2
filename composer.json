@@ -19,12 +19,11 @@
     ],
     "autoload": {
         "psr-4": {
-            "Differ\\": "src",
             "Differ\\Tests\\": "tests"
         },
         "files": [
             "src/docopt.php",
-            "src/genDiffer.php",
+            "src/differ.php",
             "src/parsers.php"
         ]
     },
